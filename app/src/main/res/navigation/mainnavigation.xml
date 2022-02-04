@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mainnavigation"
+    app:startDestination="@id/geoQuizFragment">
+
+    <fragment
+        android:id="@+id/geoQuizFragment"
+        android:name="com.example.geoquizwithviewmodel.GeoQuizFragment"
+        android:label="GeoQuizFragment" >
+        <action
+            android:id="@+id/action_geoQuizFragment_to_cheatFragment"
+            app:destination="@id/cheatFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cheatFragment"
+        android:name="com.example.geoquizwithviewmodel.CheatFragment"
+        android:label="CheatFragment" >
+        <argument
+            android:name="answerIsTrue"
+            app:argType="boolean" />
+    </fragment>
+</navigation>
