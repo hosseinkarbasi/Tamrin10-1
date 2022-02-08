@@ -1,0 +1,9 @@
+inside cheatFragment:
+navController.previousBackStackEntry?.savedStateHandle?.set("isCheater", true)
+
+
+inside GeoQuizFragment:
+       navController.currentBackStackEntry?.savedStateHandle?.getLiveData<Boolean>("isCheater")
+           ?.observe(viewLifecycleOwner) { result ->
+               quizViewModel.isCheater = result
+           }

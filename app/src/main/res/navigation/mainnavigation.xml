@@ -19,5 +19,8 @@
         <argument
             android:name="answerIsTrue"
             app:argType="boolean" />
+        <argument
+            android:name="ischeat"
+            app:argType="boolean" />
     </fragment>
 </navigation>
